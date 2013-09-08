@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+body {
+	background-color:#000;
+	background-image:url(../img-patronato/z_acc-01.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+
+#envase {
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+#envase header {
+	position:relative;
+	width:100%;
+	height:195px;
+	margin:0;
+	background-image:url(../img-patronato/z_acc-02.png);
+	background-repeat:repeat-x;
+}
+
+#envase header img {
+	margin:14px 0 0 156px;
+}
+
+#envase #content {
+	position:relative;
+	width:325px;
+	height:390px;
+	margin:143px auto 0px;
+}
+
+#envase #content #content-main {
+	position:relative;
+	padding:13px;
+	background-image:url(../img-patronato/z_acc-04.gif);
+	background-repeat:repeat-x;
+	background-color:#fff;
+	border:solid 1px #222;
+	width: 300px;
+}
+
+#envase #content #content-main h1 {
+	position:relative;
+	height:52px;
+	color:#fff;
+	text-align:center;
+	font-family:'Abel', Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:1.4em;
+}
+
+#envase #content #content-main form {
+	position:relative;
+	width:300px;
+	font-family:'Abel', Helvetica, sans-serif;
+}
+
+#envase #content #content-main form label {
+	position:relative;
+	width:143px;
+	padding:7px 0 0 0;
+	display:block;
+	color:#b03737;
+	float:left;
+	clear:left;
+	color:#555;
+}
+
+#envase #content #content-main form input[type=text] {
+	position:relative;
+	margin:7px 0 0 0;
+}
+
+#envase #content #content-main form input[type=password] {
+	position:relative;
+	margin:7px 0 0 0;
+}
+
+#envase #content #content-main form input[type=submit] {
+	position:relative;
+	margin:13px 0 0 0;
+}

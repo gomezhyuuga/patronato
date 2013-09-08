@@ -1,0 +1,28 @@
+{% extends "patronato/base.html" %}
+{% load staticfiles %}
+{% block page_id %}hecho{% endblock %}
+{% block title %}Eventos{% endblock %}
+{% block page_header %}Eventos{% endblock %}
+
+{% block content %}
+
+{% if eventos_list %}
+    {% for n in noticias_list %}
+    <article>
+        <h5>Evento {{ n.id }}. <time>{{ n.fecha }}</time></h5>
+        <h1>{{ n.titulo }}</h1>
+        <h2>{{ n.extracto }}</h2>
+        {% autoescape off %}
+            {{ n.descripcion | linebreaks }}
+        {% endautoescape %}
+    </article>
+    {% endfor %}
+{% endif %}
+
+<article>
+    <h5>Evento 1. <time>12 de julio 2013</time></h5>
+    <h1>Próximamente eventos</h1><br>
+    <h2>Espera nuestros eventos... muy pronto.</h2><br>
+</article>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "patronato/base.html" %}
+{% load staticfiles %}
+{% block page_id %}casco{% endblock %}
+{% block title %}Noticias{% endblock %}
+{% block page_header %}Noticias{% endblock %}
+
+{% block content %}
+
+{% for n in noticias_list %}
+<article>
+    <h5>Noticia {{ n.id }}. <time>{{ n.fecha }}</time></h5>
+    <h1>{{ n.titulo }}</h1>
+    <h2>{{ n.extracto }}</h2>
+    {% autoescape off %}
+        {{ n.descripcion | linebreaks }}
+    {% endautoescape %}
+
+    <p>
+        <sub>Fuente: {{ n.fuente }}</sub>
+    </p>
+
+</article>
+{% endfor %}
+
+<!-- Noticias estáticas de prueba -->
+<article>
+    <h5>Noticia 1. <time>12 de julio 2013</time></h5>
+    <h1>Lavan con bicicletas</h1>
+    <h2>Ciudad de México  (12 julio 2013).- Para aquellos que creen que los quehaceres domésticos están peleados con la salud y el ejercicio, jóvenes estudiantes del Instituto Politécnico Nacional diseñaron una lavadora que lava prendas ligeras cuando una persona se ejercita en una bicicleta fija.</h2><br>
+    <p><img src="{% static 'patronato/img/mt-noticia04.jpg' %}" width="390" height="260" alt="foto" class="derecha" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate vulputate nunc sed ultrices. Maecenas lorem nibh, lacinia varius tortor sit amet, malesuada vulputate nunc. Mauris nec tempor magna. Vestibulum fringilla ipsum non ipsum varius pretium. Etiam placerat nec nunc euismod eleifend. Vestibulum eget arcu sed nibh condimentum semper. Duis tincidunt porta lorem, sit amet tristique diam elementum vitae.</p>
+    <p> Etiam vestibulum odio id consectetur pulvinar. Nam a condimentum mauris. Sed placerat, quam sit amet facilisis congue, massa enim congue est, id sodales leo ipsum eget erat. Pellentesque tincidunt nibh sit amet pretium cursus. Donec non erat diam. Maecenas blandit ligula risus, vitae pulvinar tortor iaculis non. Sed tincidunt urna eu lobortis mattis.</p>
+</article>
+
+<article>
+    <h5>Noticia 1. <time>12 de julio 2013</time></h5>
+    <h1>Lavan con bicicletas</h1>
+    <h2>Ciudad de México  (12 julio 2013).- Para aquellos que creen que los quehaceres domésticos están peleados con la salud y el ejercicio, jóvenes estudiantes del Instituto Politécnico Nacional diseñaron una lavadora que lava prendas ligeras cuando una persona se ejercita en una bicicleta fija.</h2><br>
+    <p><img src="{% static 'patronato/img/mt-noticia04.jpg' %}" width="390" height="260" alt="foto" class="derecha" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate vulputate nunc sed ultrices. Maecenas lorem nibh, lacinia varius tortor sit amet, malesuada vulputate nunc. Mauris nec tempor magna. Vestibulum fringilla ipsum non ipsum varius pretium. Etiam placerat nec nunc euismod eleifend. Vestibulum eget arcu sed nibh condimentum semper. Duis tincidunt porta lorem, sit amet tristique diam elementum vitae.</p>
+    <p> Etiam vestibulum odio id consectetur pulvinar. Nam a condimentum mauris. Sed placerat, quam sit amet facilisis congue, massa enim congue est, id sodales leo ipsum eget erat. Pellentesque tincidunt nibh sit amet pretium cursus. Donec non erat diam. Maecenas blandit ligula risus, vitae pulvinar tortor iaculis non. Sed tincidunt urna eu lobortis mattis.</p>
+</article>
+
+{% endblock %}

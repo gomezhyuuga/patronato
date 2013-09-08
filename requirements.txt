@@ -1,0 +1,5 @@
+Django==1.5.2
+Pillow==2.1.0
+South==0.8.2
+django-suit==0.2.4
+wsgiref==0.1.2

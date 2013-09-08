@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Patronato de Museo Tecnológico de CFE | {% block title %}Inicio{% endblock %}</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="{% static 'patronato/js/jquery.js'%}"></script>
+<script type="text/javascript" src="{% static 'patronato/js/pm-modernizr.js'%}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'patronato/css/mt-pagina.css'%}" />
+<link rel="stylesheet" type="text/css" href="{% static 'patronato/css/mt-tipo.css'%}" />
+
+
+</head>
+
+<body>
+    <div id="{% block page_id %}casco{% endblock %}">
+    	<header>
+        <div class="centrar">
+        <a href="index.php"><img src="{% static 'patronato/img/mt-noticia03.png' %}" width="146" height="86" alt="" /></a>
+        <h1>{% block page_header %}{% endblock %}</h1>
+        </div>
+        </header>
+        
+        <nav>
+        <ul>
+        	<li class="evento"><a href="#">Eventos</a></li>
+        	<li class="somos"><a href="#">¿Quiénes somos?</a></li>
+            <li class="convoca"><a href="#">Convocatorias</a></li>
+            <li class="contacto"><a href="#">Contacto</a></li>
+        </ul>
+        </nav>
+
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
