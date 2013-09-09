@@ -1,0 +1,91 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+<title>Patronato de Museo Tecnológico de CFE</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'patronato/css/' %}mt-pagina.css" />
+<link rel="stylesheet" type="text/css" href="{% static 'patronato/css/' %}mt-tipo.css" />
+
+<script src="{% static 'patronato/js/' %}pm-modernizr.js" type="text/javascript"></script>
+<script src="{% static 'patronato/js/' %}pm-modernizr.js" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'patronato/js/' %}pm-forma.js"></script>
+
+
+</head>
+
+<body class="negro">
+<div id="forma">
+	<section>
+    <h1>Contáctanos.<br><span class="comentario">Tus comentarios y opiniones son importantes para nosotros.</span></h1><br>
+	<form action="mail_contacto.php" method="post">
+	<p><label>Nombre:<input type="text" name="nombre" tabindex="5" autofocus /></label></p>
+	<p><label>Correo electrónico:<input type="email" name="correo" tabindex="10" /></label></p>
+	<p><label>Asunto:<input type="text" name="asunto" tabindex="15" /></label></p>
+	<p><label>Mensaje:<textarea tabindex="20" name="mensaje"></textarea></label></p><br>
+	<p class="enviar"><input type="submit" value="Enviar">
+	</form>
+    <h4><a class="cerrar">[cerrar]</a></h4>
+    </section>
+</div><!-- fin forma -->
+
+<div id="contiene">
+	<div id="envase">
+	<header>
+    <img src="{% static 'patronato/img/' %}pm_logo-i.png" width="216" height="127" alt="logo" />
+    <hgroup>
+    <h2><a href="noticias.html">Noticias <time class="fecha">{{ ultima_noticia.fecha }}</time>
+    </a></h2>
+    <h1><a href="noticias.html">{{ ultima_noticia.titulo }}</a></h1>
+    </hgroup>
+    </header>
+
+<div id="arroba">
+<p><a class="abrir" >@</a></p>
+</div>
+    
+    <section>
+    <img src="{% static 'patronato/img/' %}mt_isection01.jpg" width="1040" height="402" alt="imagen" />
+    </section>
+    
+    <aside>
+    <div class="menu">
+    <h3 class="rojo"><a href="somos.html">¿Quienes somos?</a></h3>
+    <ul>
+    	<li><a href="somos.html#carta">Carta del Presidente del Patronato.</a></li>
+        <li><a href="somos.html#patronos">Patronos.</a></li>
+    </ul>
+    </div>
+    
+    <div class="menu">
+    <h3 class="naranja"><a href="eventos.html">Eventos</a></h3>
+    <h4><time><a href="eventos.html" class="oranje">7 de agosto de 2013</a></time></h4>
+    <p>Próximamente.</p>
+    </div>
+    
+    <div class="menu">
+    <h3 class="violeta"><a href="convocatorias.html">convocatorias</a></h3>
+    <h4><time><a href="convocatorias.html" class="purple">7 de agosto de 2013</a></time></h4>
+    <p>Próximamente.</p>
+    </div>
+    
+    <div class="menu">
+    <h3 class="verde"><a href="contacto.html">contacto</a></h3>
+    <ul>
+    	<li>Ubicación</li>
+        <li>Horarios</li>
+    </ul>
+    </div>
+    </aside>
+    
+    <footer>
+    <p>Derechos Reservados Patronato del Museo Tecnológico de Comisión Federal de Electricidad, A. C.</p>
+    </footer>
+    
+	</div><!-- fin envase -->
+</div><!-- fin contiene -->
+</body>
+</html>

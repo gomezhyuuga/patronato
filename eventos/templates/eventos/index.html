@@ -7,7 +7,7 @@
 {% block content %}
 
 {% if eventos_list %}
-    {% for n in noticias_list %}
+    {% for n in eventos_list %}
     <article>
         <h5>Evento {{ n.id }}. <time>{{ n.fecha }}</time></h5>
         <h1>{{ n.titulo }}</h1>
