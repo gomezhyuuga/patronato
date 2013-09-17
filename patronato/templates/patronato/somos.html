@@ -1,0 +1,236 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+<title>Patronato de Museo Tecnológico de CFE | Quiénes Somos</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="{% static 'patronato/js/jquery-1.10.2.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'patronato/js/pm-modernizr.js'%}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'patronato/css/mt-pagina.css'%}" />
+<link rel="stylesheet" type="text/css" href="{% static 'patronato/css/mt-tipo.css'%}" />
+<script>
+$(function () {
+    $(".clicky").click(function () {
+        var content_id = $(this).attr('href');
+        $('#slider').hide().html($(content_id).html()).show();
+        return false;
+    });
+});
+</script>
+
+
+</head>
+
+<body>
+
+<div id="sujeto">
+	<header>
+    <div class="centrar">
+    <h1>¿Quiénes somos?</h1>
+    </div>
+    </header>
+    
+    <p class="hogar"><a href="index.html"><img src="{% static 'actividades/img/' %}mt-homea.png" width="39" height="39" alt="boton" /></a></p>
+    
+    <aside>
+    <ul>
+    	<li><a href="#carta" class="clicky">Carta de nuestro Presidente</a></li>
+        <li><a href="#patronos" class="clicky">Presidentes<br />Honorarios</a></li>
+        <li><a href="#asocian" class="clicky">Asociados Patronos A-F</a></li>
+        <li><a href="#asociados" class="clicky">Asociados Patronos G-Z</a></li>
+    </ul>
+    </aside>
+    
+    <nav>
+    <ul>
+    	<li class="evento"><a href="eventos.html">Eventos</a></li>
+        <li class="convoca"><a href="convocatorias.html">Convocatorias</a></li>
+        <li class="noticia"><a href="noticias.html">Noticias</a></li>
+        <li class="contacto"><a href="contacto.html">Contacto</a></li>
+    </ul>
+    </nav>
+    
+    <article id="slider">
+    	<h1>CARTA DE NUESTRO PRESIDENTE DEL PATRONATO</h1><br>
+        <p>El Museo Tecnológico de CFE se distingue por ser pionero entre los recintos interactivos latinoamericanos y por dedicarse enérgicamente a  la comunicación, divulgación y educación complementaria de la ciencia y la tecnología en nuestro país.</p>
+        <p>El Patronato del MUTEC tiene como objetivo impulsar y promover al Museo como un espacio para el fomento y desarrollo del talento tecnológico y científico de nuestro país; posicionarlo como un espacio de confluencia y referencia en el desarrollo de acciones públicas y privadas para la promoción y divulgación de ciencia y tecnología, así como de las acciones más sobresalientes de nuestro país en temas energéticos y los avances en energías limpias.</p>
+        <p>Queremos involucrar en este esfuerzo a instituciones públicas y privadas porque creemos en la importancia de la ciencia, la tecnología, la innovación y el emprendimiento como plataformas para el desarrollo económico y social de nuestro país.</p>
+        <p>Buscamos en todas nuestras iniciativas ofrecer una experiencia que estimule el interés por la ciencia, la tecnología y la innovación en todo el público, así como generar las oportunidades más atractivas para apoyar y financiar la promoción y la divulgación de ciencia y tecnología.</p>
+        <h6>Lic. Alejandro Legorreta González</h6>
+        <h4>Presidente del Patronato</h4>
+        <p><img src="{% static 'actividades/img/' %}mt-logo-c.gif" width="216" height="130" alt="logo" /></p>
+    </article>
+    
+    <article id="carta" style="display:none;">
+    	<h1>CARTA DE NUESTRO PRESIDENTE DEL PATRONATO</h1><br><br>
+        <p>El Museo Tecnológico de CFE se distingue por ser pionero entre los recintos interactivos latinoamericanos y por dedicarse enérgicamente a  la comunicación, divulgación y educación complementaria de la ciencia y la tecnología en nuestro país.</p>
+        <p>El Patronato del MUTEC tiene como objetivo impulsar y promover al Museo como un espacio para el fomento y desarrollo del talento tecnológico y científico de nuestro país; posicionarlo como un espacio de confluencia y referencia en el desarrollo de acciones públicas y privadas para la promoción y divulgación de ciencia y tecnología, así como de las acciones más sobresalientes de nuestro país en temas energéticos y los avances en energías limpias.</p>
+        <p>Queremos involucrar en este esfuerzo a instituciones públicas y privadas porque creemos en la importancia de la ciencia, la tecnología, la innovación y el emprendimiento como plataformas para el desarrollo económico y social de nuestro país.</p>
+        <p>Buscamos en todas nuestras iniciativas ofrecer una experiencia que estimule el interés por la ciencia, la tecnología y la innovación en todo el público, así como generar las oportunidades más atractivas para apoyar y financiar la promoción y la divulgación de ciencia y tecnología.</p><br><br>
+        <p><img src="{% static 'actividades/img/' %}mt-logo-c.gif" width="216" height="130" alt="logo" /></p>        
+    </article>
+    
+    <article id="patronos" style="display:none;">
+    	<h1>patronos</h1>
+        <h5>Presidentes Honorarios</h5>
+        <div class="patron">
+        	<h2>C.P. Francisco Rojas</h2>
+            <h3>Director General</h3>
+            <h4>Comisión Federal de Electricidad</h4>
+        </div>   
+        <div class="patron">
+        	<h2>Lic. Pedro Joaquin Coldwell</h2>
+            <h3>Secretario</h3>
+            <h4>Secretaría de Energía</h4>
+            <p><img src="{% static 'actividades/img/' %}mt-logo-c.gif" width="216" height="130" alt="logo" class="arriba" /></p>
+        </div>
+        <div class="patron">
+        	<h2>Dr. Enrique Cabrero Mendoza</h2>
+            <h3>Director General</h3>
+            <h4>CONACYT</h4>
+        </div>
+    </article>
+    
+    <article id="asocian" style="display:none;">
+    	<h1>Asociados Patronos</h1>
+        <div class="patronmin">
+        	<h2>Javier Arrigunaga Gómez del Campo</h2>
+            <h3>Director General</h3>
+            <h4>Grupo Financiero Banamex</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Dr. René Asomoza Palacio</h2>
+            <h3>Director General</h3>
+            <h4>Centro de Investigación y Estudios Avanzados del IPN</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Sr. Bernardo Ayala</h2>
+            <h3>Presidente </h3>
+            <h4>Union Pacific México</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Sra. Carmen Becerril</h2>
+            <h3>Presidenta</h3>
+            <h4>Acciona Energía, S.A.</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Sra. Madeleine Brémond Santacruz</h2>
+            <h3>VP del Consejo de Administración</h3>
+            <h4>El Puerto de Liverpool, S.A.B. de C.V.</h4>
+        </div>
+        <div class="patronmin">
+            <h2>Lic. Rogelio Cerda Pérez *</h2>
+            <h3>Director de Administración</h3>
+            <h4>Comisión Federal de Electricidad</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Ing. Juan de Dios Concha Malo</h2>
+            <h3>Director General</h3>
+            <h4>Industrias IEM, S.A. de C.V.</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Ing. Javier de la Calle Pardo</h2>
+            <h3>Director General</h3>
+            <h4>Nacional Monte de Piedad</h4>
+        </div>
+        <div class="patronmin">
+            <h2>Lic. Laura Espino Rubio *</h2>
+            <h3>Lic. Laura Espino Rubio</h3>
+            <h4>Museo Tecnológico de CFE</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Ing. Ignacio Estrella Rosas</h2>
+            <h3>Director General</h3>
+            <h4>Prominer, S.A. de C.V.</h4>
+        </div>
+        <div class="patronmin">
+            <h2>Profr. Miguel Ángel Fernández *</h2>
+            <h3>Conservador</h3>
+            <h4>Palacio Nacional</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Lic. Fernando Flores y Pérez</h2>
+            <h3>Director General</h3>
+            <h4>AEROMAR</h4>
+        </div>
+        <div class="patronc">
+            <h6>* Miembros del Comité Directivo</h6>
+        </div>
+    </article>
+    
+    <article id="asociados" style="display:none;">
+    	<h1>Asociados Patronos</h1>
+        <div class="patronmin">
+            <h2>Dra. Virginia García Acosta</h2>
+            <h3>Director General</h3>
+            <h4>Centro de Investigaciones y Estudios Superiores en Antropología Social</h4>
+        </div>
+    	<div class="patronmin">
+        	<h2>Dr. Jesús González Hernández</h2>
+            <h3>Director General</h3>
+            <h4>Centro de Investigación en Materiales Avanzados</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Dr. Federico Graef Zieh</h2>
+            <h3>Director General</h3>
+            <h4>Centro de Investigación Científica y de Educación Superior de Ensenada, BC.</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>C.P. José Humberto Gutiérrez – Olvera Zubizarreta</h2>
+            <h3>Presidente y Director General</h3>
+            <h4>Conductores Mexicanos Eléctricos y de Telecomunicaciones, S.A. de C.V.</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Zvi Katz</h2>
+        	<h3>Presidente</h3>
+        	<h4>Aeromar</h4>
+
+        </div>
+        <div class="patronmin">
+        	<h2>Sra. Louise Koopman Goeser</h2>
+            <h3>Presidenta y Directora General</h3>
+            <h4>Siemens Mesoamérica, Siemens, S.A. de C.V.</h4>
+        </div>
+        <div class="patronmin">
+            <h2>Lic. Alejandro Legorreta González *</h2>
+            <h3>Presidente </h3>
+            <h4>Patronato del Museo Tecnológico de CFE, A.C.</h4><br>
+        </div>
+        <div class="patronmin">
+        	<h2>Ing. Carlos Peralta Quintero</h2>
+            <h3>Presidente del Consejo de Administración</h3>
+            <h4>Grupo IUSA</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Ing. Gonzalo Pérez Fernández</h2>
+            <h3>Presidente </h3>
+            <h4>Iberdrola México</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Ing. Alonso Quintana Kawage</h2>
+            <h3>Director General</h3>
+            <h4>Grupo ICA</h4>
+        </div>
+        <div class="patronmin">
+        	<h2>Lic. Roberto Shapiro Shein</h2>
+            <h3>Presidente del Patronato</h3>
+            <h4>ÚNETE</h4>
+        </div>
+        
+        <div class="patronmin">
+        	<h2>Lic. Marinela Servitje de Lerdo de Tejada</h2>
+            <h3>Directora General</h3>
+            <h4>7 Colores</h4>
+        </div>
+        <div class="patronc">
+            <h6>* Miembros del Comité Directivo</h6>
+        </div>
+    </article>
+    
+</div>
+
+</body>
+</html>

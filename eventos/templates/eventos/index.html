@@ -17,12 +17,12 @@
         {% endautoescape %}
     </article>
     {% endfor %}
+{% else %}
+    <article>
+        <h5><time>{% now "SHORT_DATETIME_FORMAT" %}</time></h5>
+        <h1>Próximamente eventos</h1><br>
+        <h2>Espera nuestros eventos... muy pronto.</h2><br>
+    </article>
 {% endif %}
-
-<article>
-    <h5>Evento 1. <time>12 de julio 2013</time></h5>
-    <h1>Próximamente eventos</h1><br>
-    <h2>Espera nuestros eventos... muy pronto.</h2><br>
-</article>
 
 {% endblock %}
