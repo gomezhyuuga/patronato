@@ -35,7 +35,7 @@
     <hgroup>
     <h2><a href="{% url 'noticias:index' %}">Noticias <time class="fecha">{{ ultima_noticia.fecha }}</time>
     </a></h2>
-    <h1><a href="noticias.html">{{ ultima_noticia.titulo }}</a></h1>
+    <h1><a href="{% url 'noticias:index' %}">{{ ultima_noticia.titulo }}</a></h1>
     </hgroup>
     </header>
 
@@ -49,16 +49,16 @@
     
     <aside>
     <div class="menu">
-    <h3 class="rojo"><a href="somos.html">¿Quienes somos?</a></h3>
+    <h3 class="rojo"><a href="{% url 'somos' %}">¿Quienes somos?</a></h3>
     <ul>
-    	<li><a href="somos.html#carta">Carta del Presidente del Patronato.</a></li>
-        <li><a href="somos.html#patronos">Patronos.</a></li>
+    	<li><a href="{% url 'somos' %}#carta">Carta del Presidente del Patronato.</a></li>
+        <li><a href="{% url 'somos' %}#patronos">Patronos.</a></li>
     </ul>
     </div>
     
     <div class="menu">
     <h3 class="naranja"><a href="{% url 'eventos:index' %}">Eventos</a></h3>
-    <h4><time><a href="eventos.html" class="oranje">7 de agosto de 2013</a></time></h4>
+    <h4><time><a href="{% url 'eventos:index' %}" class="oranje">7 de agosto de 2013</a></time></h4>
     <p>Próximamente.</p>
     </div>
     
