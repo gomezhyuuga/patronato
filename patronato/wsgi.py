@@ -14,6 +14,7 @@ framework.
 
 """
 import os
+import sys
 
 # We defer to a DJANGO_SETTINGS_MODULE already in the environment. This breaks
 # if running multiple sites in the same mod_wsgi process. To fix this, use
@@ -24,6 +25,11 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "patronato.settings")
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
 # setting points here.
+
+ruta = "/home/ubuntu/projects/patronato-mutec/"
+if ruta not in sys.path:
+	sys.path.append(ruta)
+	sys.path.append(ruta + "/patronato")
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
