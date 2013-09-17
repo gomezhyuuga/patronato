@@ -1,6 +1,6 @@
 from eventos.models import Evento
 from django.shortcuts import render
-from django.core.mail import send_mail // Para enviar mails
+from django.core.mail import send_mail # Para enviar mails
 
 def index(request):
 	template_name = "eventos/index.html"

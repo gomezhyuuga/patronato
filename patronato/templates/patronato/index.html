@@ -33,7 +33,7 @@
 	<header>
     <img src="{% static 'patronato/img/' %}pm_logo-i.png" width="216" height="127" alt="logo" />
     <hgroup>
-    <h2><a href="noticias.html">Noticias <time class="fecha">{{ ultima_noticia.fecha }}</time>
+    <h2><a href="{% url 'noticias:index' %}">Noticias <time class="fecha">{{ ultima_noticia.fecha }}</time>
     </a></h2>
     <h1><a href="noticias.html">{{ ultima_noticia.titulo }}</a></h1>
     </hgroup>
@@ -57,7 +57,7 @@
     </div>
     
     <div class="menu">
-    <h3 class="naranja"><a href="eventos.html">Eventos</a></h3>
+    <h3 class="naranja"><a href="{% url 'eventos:index' %}">Eventos</a></h3>
     <h4><time><a href="eventos.html" class="oranje">7 de agosto de 2013</a></time></h4>
     <p>Próximamente.</p>
     </div>
