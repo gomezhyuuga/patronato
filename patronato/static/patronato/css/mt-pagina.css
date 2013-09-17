@@ -83,6 +83,20 @@ div.centrar {
 	margin:0 auto 0;
 }
 
+.espacio {
+	position: relative;
+	width: 156px;
+	background-color: #fff;
+	height: 117px;
+	display: block;
+	color: #fff;
+	float: left;
+}
+
+.espacio h6 {
+	color: #fff !important;
+}
+
 .rojo {
 	background-color:#f00;
 }
@@ -516,7 +530,7 @@ p.hogar a:hover {
 #contiene #envase {
 	position:relative;
 	width:1040px;
-	height:806px;
+	height:689px;
 	margin:0 auto 0;
 	background-color:#fff;
 	-webkit-box-shadow:  0px 13px 15px 4px rgba(0, 0, 0, .8);
@@ -526,7 +540,7 @@ p.hogar a:hover {
 #contiene #envase header {
 	position:relative;
 	width:1040px;
-	height:208px;
+	height:169px;
 	float:left;
 	clear:left;
 	margin:0;
@@ -537,10 +551,10 @@ p.hogar a:hover {
 
 #contiene #envase hgroup {
 	position:absolute;
-	width:468px;
+	width:495px;
 	height:156px;
 	top:39px;
-	left:559px;
+	left:520px;
 }
 
 #contiene #envase h1 {
@@ -548,6 +562,7 @@ p.hogar a:hover {
 	margin:7px 0 0 0;
 	font-family: 'open_sanssemibold', Helvetica, sans-serif;
 	font-weight:normal;
+	text-align:right;
 	line-height:1.1em;
 	letter-spacing:-1px;
 	color:#fff;
@@ -567,6 +582,7 @@ p.hogar a:hover {
 	position:relative;
 	width:260px;
 	padding:4px;
+	margin-left:225px;
 	color:#39f;
 	font-family:'Baureg', Helvetica, sans-serif;
 	font-size:1.3em;
@@ -594,10 +610,11 @@ p.hogar a:hover {
 #contiene #envase section {
 	position:relative;
 	width:1040px;
-	height:402px;
+	height:325px;
 	float:left;
 	clear:left;
 	margin:0;
+	overflow:hidden;
 }
 
 #contiene #envase aside {
@@ -689,7 +706,7 @@ p.hogar a:hover {
 #contiene #envase footer {
 	position:relative;
 	width:1040px;
-	height:27px;
+	height:26px;
 	float:left;
 	clear:left;
 	margin:0;
@@ -795,7 +812,7 @@ p.hogar a:hover {
 
 #casco article:first-of-type {
 	position:relative;
-	width:780px;
+	width:715px;
 	height:auto;
 	padding:39px;
 	margin:210px auto 65px;
@@ -808,7 +825,7 @@ p.hogar a:hover {
 
 #casco article {
 	position:relative;
-	width:780px;
+	width:715px;
 	height:auto;
 	padding:39px;
 	margin:70px auto 65px;
@@ -875,6 +892,10 @@ p.hogar a:hover {
 	font-weight:normal;
 	line-height:1.8em;
 	text-align:left;
+}
+
+#casco article p sub {
+	color:#bbb;
 }
 
 /* inicia estilo evento */
@@ -966,7 +987,7 @@ p.hogar a:hover {
 
 #hecho article:first-of-type {
 	position:relative;
-	width:780px;
+	width:715px;
 	height:auto;
 	padding:39px;
 	margin:210px auto 65px;
@@ -979,7 +1000,7 @@ p.hogar a:hover {
 
 #hecho article {
 	position:relative;
-	width:780px;
+	width:715px;
 	height:auto;
 	padding:39px;
 	margin:70px auto 65px;
@@ -1127,7 +1148,7 @@ p.hogar a:hover {
 
 #cita article:first-of-type {
 	position:relative;
-	width:780px;
+	width:715px;
 	height:auto;
 	padding:39px;
 	margin:210px auto 65px;
@@ -1140,7 +1161,7 @@ p.hogar a:hover {
 
 #cita article {
 	position:relative;
-	width:780px;
+	width:715px;
 	height:auto;
 	padding:39px;
 	margin:70px auto 65px;
