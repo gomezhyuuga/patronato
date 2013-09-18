@@ -1,0 +1,31 @@
+{% extends "patronato/base.html" %}
+{% load staticfiles %}
+{% block page_id %}cita{% endblock %}
+{% block title %}Convocatorias{% endblock %}
+{% block page_header %}Convocatorias{% endblock %}
+{% block header_extra %}
+<p class="casa"><a href="{% url "index" %}"><img src="{% static "patronato/img/" %}mt-homea.png" width="39" height="39" alt="boton" /></a></p>
+{% endblock %}
+
+{% block content %}
+
+{% if convocatorias_list %}
+    {% for n in convocatorias_list %}
+    <article>
+        <h5>Convocatoria {{ n.id }}. <time>{{ n.fecha }}</time></h5>
+        <h1>{{ n.titulo }}</h1>
+        <h2>{{ n.extracto }}</h2>
+        {% autoescape off %}
+            {{ n.descripcion | linebreaks }}
+        {% endautoescape %}
+    </article>
+    {% endfor %}
+{% else %}
+    <article>
+        <h5><time>{% now "SHORT_DATETIME_FORMAT" %}</time></h5>
+        <h1>Próximamente convocatorias</h1><br>
+        <h2>Espera nuestras convocatorias... muy pronto.</h2><br>
+    </article>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+<title>Patronato de Museo Tecnológico de CFE | Convocatorias</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="css-patronato/mt-pagina.css" />
+<link rel="stylesheet" type="text/css" href="css-patronato/mt-tipo.css" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js-patronato/pm-modernizr.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="cita">
+	<header>
+    <div class="centrar">
+    <a href="index.html"><img src="img-patronato/mt-noticia03.png" width="146" height="86" alt="" /></a>
+    <h1>convocatorias</h1>
+    </div>
+    </header>
+    
+    <p class="casa"><a href="index.html"><img src="img-patronato/mt-homea.png" width="39" height="39" alt="boton" /></a></p>
+    
+    <nav>
+    <ul>
+    	<li class="evento"><a href="eventos.html">Eventos</a></li>
+    	<li class="somos"><a href="somos.html">¿Quiénes somos?</a></li>
+        <li class="noticia"><a href="noticias.html">Noticias</a></li>
+        <li class="contacto"><a href="contacto.html">Contacto</a></li>
+    </ul>
+    </nav>
+    {% if convocatorias_list %}
+        {% for n in convocatorias_list %}
+        <article>
+            <h5>Convocatoria {{ n.id }}. <time>{{ n.fecha }}</time></h5>
+            <h1>{{ n.titulo }}</h1>
+            <h2>{{ n.extracto }}</h2>
+            {% autoescape off %}
+                {{ n.descripcion | linebreaks }}
+            {% endautoescape %}
+        </article>
+        {% endfor %}
+    {% else %}
+        <article>
+            <h1>Próximamente Convocatorias</h1><br>
+            <h2>Espera nuestras convocatorias... muy pronto.</h2><br>
+            <img src="img-patronato/mt-e130807.jpg" width="520" height="273" alt="fotografia" />
+        </article>
+    {% endif %}
+    
+</div>
+
+</body>
+</html>

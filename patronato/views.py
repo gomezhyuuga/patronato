@@ -3,11 +3,19 @@ from noticias.models import Noticia
 
 def index(request):
 	template_name = "patronato/index.html"
-	noticia = Noticia.objects.latest('created_at')
+	try:
+		noticia = Noticia.objects.latest()
+	except Noticia.DoesNotExist:
+		noticia = None
 	context = { "ultima_noticia": noticia }
 	return render( request, template_name, context)
+
 def somos(request):
 	template_name = "patronato/somos.html"
-	# noticia = Noticia.objects.latest('created_at')
-	context = {  }
+	context = { }
+	return render( request, template_name, context)
+	
+def contacto(request):
+	template_name = "patronato/contacto.html"
+	context = { }
 	return render( request, template_name, context)

@@ -23,13 +23,15 @@
         <h1>{% block page_header %}{% endblock %}</h1>
         </div>
         </header>
+
+        {% block header_extra %}{% endblock %}
         
         <nav>
         <ul>
         	<li class="evento"><a href="{% url 'eventos:index' %}">Eventos</a></li>
-        	<li class="somos"><a href="#">¿Quiénes somos?</a></li>
-            <li class="convoca"><a href="#">Convocatorias</a></li>
-            <li class="contacto"><a href="#">Contacto</a></li>
+        	<li class="somos"><a href="{% url "somos"%}">¿Quiénes somos?</a></li>
+            <li class="convoca"><a href="{% url "convocatorias:index" %}">Convocatorias</a></li>
+            <li class="contacto"><a href="{% url "contacto" %}">Contacto</a></li>
         </ul>
         </nav>
 

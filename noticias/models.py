@@ -11,9 +11,11 @@ class Noticia(models.Model):
 	created_at = models.DateTimeField( auto_now_add=True, blank=True, null=True )
 	modified_at = models.DateTimeField( auto_now=True, blank=True, null=True )
 
+
 	def __unicode__(self):
 		return self.titulo
 
 	class Meta:
 		verbose_name = "noticia"
 		verbose_name_plural = "noticias"
+		get_latest_by = "created_at"

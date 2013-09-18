@@ -33,7 +33,7 @@ $(function () {
     </div>
     </header>
     
-    <p class="hogar"><a href="index.html"><img src="{% static 'patronato/img/' %}mt-homea.png" width="39" height="39" alt="boton" /></a></p>
+    <p class="hogar"><a href="{% url "index" %}"><img src="{% static 'patronato/img/' %}mt-homea.png" width="39" height="39" alt="boton" /></a></p>
     
     <aside>
     <ul>
@@ -46,10 +46,10 @@ $(function () {
     
     <nav>
     <ul>
-    	<li class="evento"><a href="eventos.html">Eventos</a></li>
-        <li class="convoca"><a href="convocatorias.html">Convocatorias</a></li>
-        <li class="noticia"><a href="noticias.html">Noticias</a></li>
-        <li class="contacto"><a href="contacto.html">Contacto</a></li>
+        <li class="evento"><a href="{% url 'eventos:index' %}">Eventos</a></li>
+        <li class="somos"><a href="{% url "somos"%}">¿Quiénes somos?</a></li>
+        <li class="convoca"><a href="{% url "convocatorias:index" %}">Convocatorias</a></li>
+        <li class="contacto"><a href="{% url "contacto" %}">Contacto</a></li>
     </ul>
     </nav>
     
