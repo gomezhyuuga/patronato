@@ -47,9 +47,9 @@ $(function () {
     <nav>
     <ul>
         <li class="evento"><a href="{% url 'eventos:index' %}">Eventos</a></li>
-        <li class="somos"><a href="{% url "somos"%}">¿Quiénes somos?</a></li>
-        <li class="convoca"><a href="{% url "convocatorias:index" %}">Convocatorias</a></li>
-        <li class="contacto"><a href="{% url "contacto" %}">Contacto</a></li>
+        <li class="convoca"><a href="{% url 'convocatorias:index' %}">Convocatorias</a></li>
+        <li class="noticia"><a href="{% url 'noticias:index' %}">¿Quiénes somos?</a></li>
+        <li class="contacto"><a href="{% url 'contacto' %}">Contacto</a></li>
     </ul>
     </nav>
     
@@ -141,6 +141,9 @@ $(function () {
             <h3>Lic. Laura Espino Rubio</h3>
             <h4>Museo Tecnológico de CFE</h4>
         </div>
+        <div class="espacio">
+            <h6>-</h6>
+        </div>
         <div class="patronmin">
         	<h2>Ing. Ignacio Estrella Rosas</h2>
             <h3>Director General</h3>
@@ -150,11 +153,6 @@ $(function () {
             <h2>Profr. Miguel Ángel Fernández *</h2>
             <h3>Conservador</h3>
             <h4>Palacio Nacional</h4>
-        </div>
-        <div class="patronmin">
-        	<h2>Lic. Fernando Flores y Pérez</h2>
-            <h3>Director General</h3>
-            <h4>AEROMAR</h4>
         </div>
         <div class="patronc">
             <h6>* Miembros del Comité Directivo</h6>
