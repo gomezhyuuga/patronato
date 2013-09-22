@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
-from patronato.admin import patronato_admin_site # admin del cliente
+# from patronato.admin import patronato_admin_site # admin del cliente
 
 urlpatterns = patterns('',
     # Examples:
