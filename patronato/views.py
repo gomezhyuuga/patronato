@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from noticias.models import Noticia
+from eventos.models import Evento
+from convocatorias.models import Convocatoria
 
 def index(request):
 	template_name = "patronato/index.html"
@@ -7,7 +9,15 @@ def index(request):
 		noticia = Noticia.objects.latest()
 	except Noticia.DoesNotExist:
 		noticia = None
-	context = { "ultima_noticia": noticia }
+	try:
+		evento = Evento.objects.latest()
+	except Evento.DoesNotExist:
+		evento = None
+	try:
+		convocatoria = Convocatoria.objects.latest()
+	except Convocatoria.DoesNotExist:
+		convocatoria = None
+	context = { "ultima_noticia": noticia, "ultimo_evento": evento, "ultima_convocatoria": convocatoria }
 	return render( request, template_name, context)
 
 def somos(request):

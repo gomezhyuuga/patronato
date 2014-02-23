@@ -16,3 +16,4 @@ class Evento(models.Model):
 	class Meta:
 		verbose_name = "evento"
 		verbose_name_plural = "eventos"
+		get_latest_by = "created_at"

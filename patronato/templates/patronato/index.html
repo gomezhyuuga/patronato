@@ -76,14 +76,46 @@
     
     <div class="menu">
     <h3 class="naranja"><a href="{% url 'eventos:index' %}">Eventos</a></h3>
-    <h4><time><a href="{% url 'eventos:index' %}" class="oranje">Septiembre de 2013</a></time></h4>
-    <p>Próximamente.</p>
+    <h4>
+        <time>
+            <a href="{% url 'eventos:index' %}" class="oranje">
+                {% if ultimo_evento %}
+                    {{ ultimo_evento.fecha }}
+                {% else %}
+                    {% now "F j, Y" %}
+                {% endif %}
+            </a>
+        </time>
+    </h4>
+    
+    {% if ultimo_evento %}
+        <p>{{ ultimo_evento.extracto }}</p>
+    {% else %}
+        <p>Próximamente</p>
+    {% endif %}
+    
     </div>
     
     <div class="menu">
     <h3 class="violeta"><a href="{% url "convocatorias:index" %}">convocatorias</a></h3>
-    <h4><time><a href="{% url "convocatorias:index" %}" class="purple">Septiembre de 2013</a></time></h4>
-    <p>Próximamente.</p>
+    <h4>
+        <time>
+            <a href="{% url 'convocatorias:index' %}" class="purple">
+                {% if ultima_convocatoria %}
+                    {{ ultima_convocatoria.fecha }}
+                {% else %}
+                    {% now "F j, Y" %}
+                {% endif %}
+            </a>
+        </time>
+    </h4>
+    
+    {% if ultima_convocatoria %}
+        <p>{{ ultima_convocatoria.extracto }}</p>
+    {% else %}
+        <p>Próximamente</p>
+    {% endif %}
+    
     </div>
     
     <div class="menu">

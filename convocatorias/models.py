@@ -16,4 +16,4 @@ class Convocatoria(models.Model):
 	class Meta:
 		verbose_name = "convocatoria"
 		verbose_name_plural = "convocatorias"
-
+		get_latest_by = "created_at"
